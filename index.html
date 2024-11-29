@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather Dashboard</h1>
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Enter city name" autocomplete="off">
+                <button id="search-btn">Search</button>
+            </div>
+            <div id="suggestions" class="suggestions"></div>
+        </header>
+        <main>
+            <section id="current-weather" class="weather-card">
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                </div>
+                <div id="weather-info" class="weather-info hidden">
+                    <h2 id="city-name"></h2>
+                    <div class="weather-icon">
+                        <i id="weather-icon" class="wi"></i>
+                    </div>
+                    <p id="temperature" class="temperature"></p>
+                    <p id="description" class="description"></p>
+                    <div class="details">
+                        <p>Humidity: <span id="humidity"></span></p>
+                        <p>Wind: <span id="wind-speed"></span></p>
+                    </div>
+                </div>
+            </section>
+            <section id="forecast" class="forecast">
+                <h3>5-Day Forecast</h3>
+                <div id="forecast-container" class="forecast-container"></div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
